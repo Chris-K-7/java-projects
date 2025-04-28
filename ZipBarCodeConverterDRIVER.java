@@ -8,7 +8,7 @@ import java.util.Scanner;
 //---------------------------------------------------------------------------------
 // This program is the driver class for the ZipBarCodeConverter program.
 //---------------------------------------------------------------------------------
-public class ZipBarCodeConverterDRIVER {
+public class ZipBarCodeConverter {
 
     public static void main(String[] args) {
         
