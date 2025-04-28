@@ -1,4 +1,3 @@
-
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Scanner;
@@ -21,6 +20,7 @@ public class MidtermProject {
     
     NumberFormat currency = NumberFormat.getCurrencyInstance();
     DecimalFormat format = new DecimalFormat("0.00");
+    DecimalFormat format2 = new DecimalFormat("0.0");
     
     System.out.println("Enter your annual interest rate(for example, if 5%, enter 5): ");
     aIR = scan.nextDouble();
@@ -38,11 +38,11 @@ public class MidtermProject {
     
     
     double interestRate, totalPayment, $overPayment, percentOverpayment;
-    interestRate = aIR * 100;
+    interestRate = (aIR * 100);
     System.out.println();
     System.out.println("Your mortgage amount in dollars is: " + "$" + format.format(M));
     System.out.println("The number of years your mortgage is held is: " + nOY);
-    System.out.println("Range of Interest Rates: " + (interestRate - 1) + "% - " + (interestRate + 1) + "%");
+    System.out.println("Range of Interest Rates: " + format2.format((interestRate - 1)) + "% - " + format2.format((interestRate + 1)) + "%");
     System.out.println();
     System.out.println();
     
@@ -55,7 +55,7 @@ public class MidtermProject {
     percentOverpayment = ($overPayment / M);
     percentOverpayment = percentOverpayment * 100;
     
-    System.out.println(interestRate + "%            " + currency.format(monthlyPayment) + "            " + currency.format(totalPayment) + "       " + currency.format($overPayment) + "       " + format.format(percentOverpayment) + "%");
+    System.out.println(format2.format(interestRate) + "%            " + currency.format(monthlyPayment) + "            " + currency.format(totalPayment) + "       " + currency.format($overPayment) + "       " + format.format(percentOverpayment) + "%");
     interestRate  = interestRate + 0.5;
     monthlyPayment = ((interestRate / 100) / 12 * M) / (1-(1/Math.pow(1+((interestRate / 100)/12), (12*nOY))));
     totalPayment = monthlyPayment * (nOY*12);
@@ -63,21 +63,21 @@ public class MidtermProject {
     percentOverpayment = ($overPayment / M);
     percentOverpayment = percentOverpayment * 100;
 
-    System.out.println(interestRate + "%            " + currency.format(monthlyPayment) + "            " + currency.format(totalPayment) + "       " + currency.format($overPayment) + "       " + format.format(percentOverpayment) + "%");
+    System.out.println(format2.format(interestRate) + "%            " + currency.format(monthlyPayment) + "            " + currency.format(totalPayment) + "       " + currency.format($overPayment) + "       " + format.format(percentOverpayment) + "%");
     interestRate  = interestRate + 0.5;
     monthlyPayment = ((interestRate / 100) / 12 * M) / (1-(1/Math.pow(1+((interestRate / 100)/12), (12*nOY))));    totalPayment = monthlyPayment * (nOY*12);
     $overPayment = totalPayment - M;
     percentOverpayment = ($overPayment / M);
     percentOverpayment = percentOverpayment * 100;
     
-    System.out.println(interestRate + "%            " + currency.format(monthlyPayment) + "            " + currency.format(totalPayment) + "       " + currency.format($overPayment) + "       " + format.format(percentOverpayment) + "%");
+    System.out.println(format2.format(interestRate) + "%            " + currency.format(monthlyPayment) + "            " + currency.format(totalPayment) + "       " + currency.format($overPayment) + "       " + format.format(percentOverpayment) + "%");
     interestRate  = interestRate + 0.5;
     monthlyPayment = ((interestRate / 100) / 12 * M) / (1-(1/Math.pow(1+((interestRate / 100)/12), (12*nOY))));    totalPayment = monthlyPayment * (nOY*12);
     $overPayment = totalPayment - M;
     percentOverpayment = ($overPayment / M);
     percentOverpayment = percentOverpayment * 100;
 
-    System.out.println(interestRate + "%            " + currency.format(monthlyPayment) + "            " + currency.format(totalPayment) + "       " + currency.format($overPayment) + "       " + format.format(percentOverpayment) + "%");
+    System.out.println(format2.format(interestRate) + "%            " + currency.format(monthlyPayment) + "            " + currency.format(totalPayment) + "       " + currency.format($overPayment) + "       " + format.format(percentOverpayment) + "%");
     interestRate  = interestRate + 0.5;
     monthlyPayment = ((interestRate / 100) / 12 * M) / (1-(1/Math.pow(1+((interestRate / 100)/12), (12*nOY))));    totalPayment = monthlyPayment * (nOY*12);
     $overPayment = totalPayment - M;
